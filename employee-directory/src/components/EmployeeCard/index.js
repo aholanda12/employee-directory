@@ -7,21 +7,26 @@ function EmployeeCard(props) {
       <div className="img-container">
         <img alt={props.name} src={props.image} />
       </div>
+      {/* <div className="content">
+        <div className="name">
+          {props.name}
+        </div>
+        <div className="department">
+          {props.department}
+        </div>
+        <div className="email">
+          {props.email}
+        </div>
+        <div className="phone">
+          {props.phone}
+        </div>
+      </div> */}
+
       <div className="content">
-        <ul>
-          <li>
-            <strong>Name:</strong> {props.name}
-          </li>
-          <li>
-            <strong>Department:</strong> {props.department}
-          </li>
-          <li>
-            <strong>Email:</strong> {props.email}
-          </li>
-          <li>
-            <strong>Phone Number:</strong> {props.phone}
-          </li>
-        </ul>
+          <p>{props.name}</p>
+          <p>{props.department}</p>
+          <p>{props.email}</p>
+          <p>{props.phone}</p>
       </div>
     </div>
   );
