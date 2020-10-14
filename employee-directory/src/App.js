@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import EmployeeCard from "./components/EmployeeCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import employees from "./employees.json";
@@ -23,7 +23,7 @@ class App extends Component {
       <Wrapper>
         <Title>Employee Directory</Title>
         {this.state.employees.map(emp => (
-          <FriendCard
+          <EmployeeCard
             id={emp.id}
             key={emp.id}
             name={emp.name}
