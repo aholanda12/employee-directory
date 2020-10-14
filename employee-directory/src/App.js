@@ -3,6 +3,7 @@ import EmployeeCard from "./components/EmployeeCard";
 import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Search from "./components/Search";
 import employees from "./employees.json";
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Employee Directory</Title>
+        <Search></Search>
         <Header></Header>
         {this.state.employees.map(emp => (
           <EmployeeCard
