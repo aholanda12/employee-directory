@@ -20,18 +20,31 @@ class App extends Component {
     // this.setState({ friends });
   };
 
-  componentDidMount() {
-        this.setState({ employees });
-      };
+  handleInputChange = event => {
+    // this.setState({
+    //     searchTerm: event.target.value
+    // });
+    // let userTyped = event.target.value;
+    console.log(event.target.value)
+  //   const filteredList = this.props.employees.filter((item) => {
+  //       let values = item.name + item.department + item.name.last + item.gender + item.dob.age + item.email + item.cell;
+  //       return values.indexOf(userTyped) !== -1;
 
-  
+  //   });
+
+  //   this.setState({
+  //       filteredEmployees: filteredList
+
+  //   });
+}
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
         <Title>Employee Directory</Title>
-        <Search></Search>
+        <Search 
+        handleInputChange={this.handleInputChange} />
         <Header></Header>
         {this.state.employees.map(emp => (
           <EmployeeCard
