@@ -15,15 +15,13 @@ class App extends Component {
   handleInputChange = event => {
     const searchText = event.target.value
     console.log(searchText)
-    const employees = this.state.employees.filter(employee => {
-      if (employee.name.toLowerCase().includes(searchText.toLowerCase())) {
-        return true;
-      }
-      return false;
-    });
-    console.log(employees)
-    this.setState({ employees })
+    if (searchText) {
+    const filteredEmployees = this.state.employees.filter(employee => employee.name.toLowerCase().includes(searchText.toLowerCase()))
+    console.log(filteredEmployees)
+    this.setState({ employees: filteredEmployees }) }
+    else { this.setState({ employees }) }
   }
+
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
