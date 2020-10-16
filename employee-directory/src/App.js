@@ -22,6 +22,10 @@ class App extends Component {
     else { this.setState({ employees }) }
   }
 
+  sortUsers = event => {
+    console.log(event)
+  }
+
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
