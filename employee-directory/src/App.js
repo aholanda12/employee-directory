@@ -24,6 +24,13 @@ class App extends Component {
 
   sortUsers = event => {
     console.log(event)
+    const orderedList = this.state.employees
+    orderedList.sort(function(a, b){
+      if(a.name < b.name) { return -1; }
+      if(a.name > b.name) { return 1; }
+      return 0;
+  })
+    this.setState({ employees: orderedList })
   }
 
 
@@ -34,7 +41,7 @@ class App extends Component {
         <Title>Employee Directory</Title>
         <Search
           handleInputChange={this.handleInputChange} />
-        <Header></Header>
+        <Header sortUsers={this.sortUsers} />
         {this.state.employees.map(emp => (
           <EmployeeCard
             id={emp.id}
