@@ -14,22 +14,29 @@ class App extends Component {
 
   handleInputChange = event => {
     const searchText = event.target.value
-    console.log(searchText)
     if (searchText) {
-    const filteredEmployees = this.state.employees.filter(employee => employee.name.toLowerCase().includes(searchText.toLowerCase()))
-    console.log(filteredEmployees)
-    this.setState({ employees: filteredEmployees }) }
+      const filteredEmployees = this.state.employees.filter(employee => employee.name.toLowerCase().includes(searchText.toLowerCase()))
+      this.setState({ employees: filteredEmployees })
+    }
     else { this.setState({ employees }) }
   }
 
   sortUsers = event => {
-    console.log(event)
     const orderedList = this.state.employees
-    orderedList.sort(function(a, b){
-      if(a.name < b.name) { return -1; }
-      if(a.name > b.name) { return 1; }
-      return 0;
-  })
+    if (orderedList[0].name.charAt(0).toLowerCase() === "a") {
+      orderedList.sort(function (a, b) {
+        if (a.name > b.name) { return -1; }
+        if (a.name < b.name) { return 1; }
+        return 0;
+      })
+    }
+    else {
+      orderedList.sort(function (a, b) {
+        if (a.name < b.name) { return -1; }
+        if (a.name > b.name) { return 1; }
+        return 0;
+      })
+    }
     this.setState({ employees: orderedList })
   }
 
@@ -41,7 +48,8 @@ class App extends Component {
         <Title>Employee Directory</Title>
         <Search
           handleInputChange={this.handleInputChange} />
-        <Header sortUsers={this.sortUsers} />
+        <Header 
+        sortUsers={this.sortUsers} />
         {this.state.employees.map(emp => (
           <EmployeeCard
             id={emp.id}

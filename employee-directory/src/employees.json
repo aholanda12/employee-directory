@@ -1,19 +1,19 @@
 [
   {
     "id": 1,
-    "image": "https://randomuser.me/api/portraits/women/12.jpg",
-    "name": "Annie Scott",
-    "department": "Production",
-    "email": "annies@email.com",
-    "phone": "(604) 383-4415"
-  },
-  {
-    "id": 2,
     "image": "https://randomuser.me/api/portraits/men/12.jpg",
     "name": "Carl Watson",
     "department": "Finance",
     "email": "carlw@email.com",
     "phone": "(668) 838-5868"
+  },
+  {
+    "id": 2,
+    "image": "https://randomuser.me/api/portraits/women/12.jpg",
+    "name": "Annie Scott",
+    "department": "Production",
+    "email": "annies@email.com",
+    "phone": "(604) 383-4415"
   },
   {
     "id": 3,
