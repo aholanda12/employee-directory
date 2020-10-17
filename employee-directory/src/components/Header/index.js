@@ -7,9 +7,9 @@ function Header(props) {
       <div className="titles">
           <p>Image</p>
           <p>Name <i className="arrow down" onClick={props.sortUsers}></i></p>
-          <p>Department <i className="arrow down"></i></p>
-          <p>Email <i className="arrow down"></i></p>
-          <p>Phone <i className="arrow down"></i></p>
+          <p>Department</p>
+          <p>Email</p>
+          <p>Phone</p>
       </div>
     </div>
   );
