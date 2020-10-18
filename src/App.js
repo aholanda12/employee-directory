@@ -6,9 +6,8 @@ import Title from "./components/Title";
 import Search from "./components/Search";
 import employees from "./employees.json";
 
-// comment
+
 class App extends Component {
-  // Setting this.state.friends to the friends json array
   state = {
     employees
   };
@@ -41,8 +40,6 @@ class App extends Component {
     this.setState({ employees: orderedList })
   }
 
-
-  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
