@@ -1,5 +1,5 @@
 
-# Template Engine Employee Summary
+# Employee Directory
 
 ## Description
 ![Screenshot](https://github.com/aholanda12/employee-directory/blob/main/public/screenshot.PNG)
